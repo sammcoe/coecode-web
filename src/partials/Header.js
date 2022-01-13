@@ -37,16 +37,16 @@ function Header() {
 
           {/* Site navigation */}
           <nav className="flex flex-grow">
-            {/* <ul className="flex flex-grow justify-end flex-wrap items-center">
+            <ul className="flex flex-grow justify-end flex-wrap items-center">
               <li>
                 <Link
-                  to="/signin"
+                  to="/get-rhythm-privacy"
                   className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
                 >
-                  Sign in
+                  Get Rhythm Privacy
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="/signup"
                   className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
@@ -63,8 +63,8 @@ function Header() {
                     />
                   </svg>
                 </Link>
-              </li>
-            </ul> */}
+              </li> */}
+            </ul>
           </nav>
         </div>
       </div>
