@@ -12,14 +12,14 @@ function GetRhythmPrivacy() {
       {/*  Page content */}
       <main className="flex-grow">
         {/*  Page sections */}
-        <section className="bg-gradient-to-b from-gray-100 to-white">
+        <section className="">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="pt-32 pb-12 md:pt-40 md:pb-20">
               {/* Page header */}
               <div className="max-w-3xl mx-auto text-center pb-10 md:pb-10">
-                <h2 className="h2">Get Rhythm Privacy Policy</h2>
+                <h2 className="h2 text-white">Get Rhythm Privacy Policy</h2>
               </div>
-              <div className="text-sm text-gray-500 text-left mt-3">
+              <div className="text-sm text-gray-200 text-left mt-3">
                 <h3 className="h3">General</h3>
                 <br />
                 <p>
