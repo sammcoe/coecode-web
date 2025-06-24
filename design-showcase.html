@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Showcase - Coe Code</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .showcase-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-demo {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(15px);
+        }
+        
+        .feature-demo:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+        
+        .demo-button {
+            margin: 1rem 0.5rem 0.5rem 0;
+            display: inline-block;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .color-swatch {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            border: 2px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            padding: 0.25rem;
+        }
+        
+        .typography-demo h1, .typography-demo h2, .typography-demo h3 {
+            margin: 0.5rem 0;
+        }
+        
+        .animation-demo {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .pulse-demo {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #fff 0%, #ccc 50%, #999 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-panel {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .interactive-demo {
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .before, .after {
+            text-align: center;
+        }
+        
+        .before h4, .after h4 {
+            color: #999;
+            margin-bottom: 1rem;
+        }
+        
+        .old-button {
+            background: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .mockup-frame {
+            background: linear-gradient(145deg, #222, #111);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mockup-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+    </style>
+</head>
+<body>
+    <nav style="padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <a href="./" style="display: flex; align-items: center; text-decoration: none; color: white;">
+            <img src="images/logo.png" alt="Coe Code" style="height: 32px; margin-right: 1rem;">
+            <span style="font-weight: 500;">Design Showcase</span>
+        </a>
+        <div>
+            <a href="./">Home</a>
+            <a href="./projects">Projects</a>
+            <a href="./connect">Connect</a>
+        </div>
+    </nav>
+
+    <div class="showcase-section">
+        <div style="text-align: center; margin-bottom: 4rem;">
+            <h1 class="gradient-text">Enhanced Design System</h1>
+            <p style="font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto;">
+                A comprehensive showcase of modern design improvements, enhanced animations, 
+                and premium user experience features.
+            </p>
+        </div>
+
+        <!-- Color Palette -->
+        <div class="feature-demo">
+            <h3>Enhanced Color Palette</h3>
+            <p style="color: #999; margin-bottom: 1rem;">Modern dark theme with sophisticated gradients and transparency layers</p>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #000;">#000</div>
+                <div class="color-swatch" style="background: #111;">#111</div>
+                <div class="color-swatch" style="background: #222;">#222</div>
+                <div class="color-swatch" style="background: #333;">#333</div>
+                <div class="color-swatch" style="background: #555;">#555</div>
+                <div class="color-swatch" style="background: rgba(255,255,255,0.1);">Glass</div>
+                <div class="color-swatch" style="background: linear-gradient(135deg, #333, #555);">Grad</div>
+            </div>
+        </div>
+
+        <!-- Typography -->
+        <div class="feature-demo typography-demo">
+            <h3>Enhanced Typography</h3>
+            <p style="color: #999; margin-bottom: 1rem;">Improved font weights, spacing, and responsive scaling</p>
+            <h1 style="font-size: 2.5rem;">Primary Heading</h1>
+            <h2 style="font-size: 2rem;">Secondary Heading</h2>
+            <h3 style="font-size: 1.5rem;">Tertiary Heading</h3>
+            <p style="color: #ccc;">Body text with improved readability and contrast</p>
+            <p style="color: #999; font-size: 0.9rem;">Secondary text with subtle styling</p>
+        </div>
+
+        <!-- Button Enhancements Showcase -->
+        <div class="feature-demo">
+            <h3>Enhanced Interactive Elements</h3>
+            <p style="color: #999; margin-bottom: 1rem;">Buttons with shimmer effects, better hover states, and micro-animations</p>
+            
+            <div class="before-after">
+                <div class="before">
+                    <h4>Before</h4>
+                    <button class="old-button">Basic Button</button>
+                </div>
+                <div class="after">
+                    <h4>After</h4>
+                    <a href="#" class="btn demo-button">Enhanced Button</a>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem;">
+                <a href="#" class="btn demo-button">Primary Action</a>
+                <a href="#" class="cta-button demo-button">Call to Action</a>
+                <button class="form-button demo-button">Form Button</button>
+            </div>
+        </div>
+
+        <!-- Glass Morphism -->
+        <div class="feature-demo">
+            <h3>Glass Morphism Design</h3>
+            <p style="color: #999; margin-bottom: 1rem;">Modern frosted glass effects with backdrop blur</p>
+            
+            <div class="glass-panel">
+                <h4 style="margin: 0 0 0.5rem 0; color: white;">Glass Panel Example</h4>
+                <p style="color: #ccc; margin: 0;">This panel uses backdrop-filter blur effects for a modern glass appearance.</p>
+            </div>
+            
+            <div class="glass-panel" style="background: rgba(255,255,255,0.05);">
+                <h4 style="margin: 0 0 0.5rem 0; color: white;">Subtle Variant</h4>
+                <p style="color: #ccc; margin: 0;">Lower opacity version for layered content.</p>
+            </div>
+        </div>
+
+        <!-- Animation Showcase -->
+        <div class="showcase-grid">
+            <div class="feature-demo animation-demo">
+                <h3>Enhanced Animations</h3>
+                <div class="pulse-demo" style="width: 100px; height: 100px; background: linear-gradient(135deg, #333, #555); border-radius: 50%; margin: 1rem auto;"></div>
+                <p style="color: #999;">Pulse animation example</p>
+            </div>
+            
+            <div class="feature-demo interactive-demo" onclick="this.style.transform = this.style.transform ? '' : 'scale(0.95)'">
+                <h3>Interactive Elements</h3>
+                <div style="width: 100px; height: 100px; background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); border-radius: 12px; margin: 1rem auto; transition: all 0.3s ease;"></div>
+                <p style="color: #999;">Click to interact</p>
+            </div>
+        </div>
+
+        <!-- Form Enhancements -->
+        <div class="feature-demo">
+            <h3>Enhanced Form Design</h3>
+            <p style="color: #999; margin-bottom: 1rem;">Improved input styling with focus states and validation</p>
+            
+            <div style="max-width: 400px;">
+                <div class="form-group">
+                    <label>Enhanced Input Field</label>
+                    <input type="text" placeholder="Type something..." style="margin-bottom: 1rem;">
+                </div>
+                
+                <div class="form-group">
+                    <label>Select Dropdown</label>
+                    <select style="margin-bottom: 1rem;">
+                        <option>Choose an option</option>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Textarea</label>
+                    <textarea placeholder="Enter your message..." rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenshot Gallery Enhancement -->
+        <div class="feature-demo">
+            <h3>Enhanced Image Gallery</h3>
+            <p style="color: #999; margin-bottom: 1rem;">Clickable lightbox gallery with smooth transitions</p>
+            
+            <div class="screenshot-grid" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                <div class="screenshot-item">
+                    <img src="images/press1.png" alt="Gallery Demo 1" style="cursor: pointer;">
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/press2.png" alt="Gallery Demo 2" style="cursor: pointer;">
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/press3.png" alt="Gallery Demo 3" style="cursor: pointer;">
+                </div>
+            </div>
+            <p style="color: #666; font-size: 0.9rem; text-align: center; margin-top: 1rem;">
+                Click any image to open in lightbox mode with keyboard navigation
+            </p>
+        </div>
+
+        <!-- Mobile Responsiveness -->
+        <div class="feature-demo">
+            <h3>Mobile-First Responsive Design</h3>
+            <p style="color: #999; margin-bottom: 1rem;">Optimized layouts that adapt beautifully to any screen size</p>
+            
+            <div class="mockup-frame">
+                <div style="text-align: center;">
+                    <div style="display: inline-block; width: 200px; height: 100px; background: rgba(255,255,255,0.1); border-radius: 8px; margin: 0.5rem; position: relative;">
+                        <div style="position: absolute; bottom: 8px; left: 8px; font-size: 0.8rem; color: #999;">Desktop</div>
+                    </div>
+                    <div style="display: inline-block; width: 120px; height: 100px; background: rgba(255,255,255,0.08); border-radius: 8px; margin: 0.5rem; position: relative;">
+                        <div style="position: absolute; bottom: 8px; left: 8px; font-size: 0.8rem; color: #999;">Tablet</div>
+                    </div>
+                    <div style="display: inline-block; width: 80px; height: 100px; background: rgba(255,255,255,0.06); border-radius: 8px; margin: 0.5rem; position: relative;">
+                        <div style="position: absolute; bottom: 8px; left: 8px; font-size: 0.8rem; color: #999;">Mobile</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Features -->
+        <div class="feature-demo">
+            <h3>Performance Optimizations</h3>
+            <p style="color: #999; margin-bottom: 1rem;">Advanced features for optimal user experience</p>
+            
+            <div class="glass-panel">
+                <h4 style="color: white; margin: 0 0 1rem 0;">✨ Enhanced Features:</h4>
+                <ul style="color: #ccc; margin: 0; padding-left: 1.5rem;">
+                    <li>Loading animations with image preloading</li>
+                    <li>Intersection Observer for smooth scroll animations</li>
+                    <li>Lazy loading for improved performance</li>
+                    <li>Parallax scrolling effects</li>
+                    <li>Real-time form validation with animated feedback</li>
+                    <li>Lightbox gallery with keyboard navigation</li>
+                    <li>Service Worker support for caching</li>
+                    <li>Enhanced scrollbar styling</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Design Principles -->
+        <div class="feature-demo" style="grid-column: 1 / -1;">
+            <h3>Design Philosophy</h3>
+            <p style="color: #999; margin-bottom: 2rem;">The enhanced design follows modern web design principles</p>
+            
+            <div class="showcase-grid">
+                <div class="glass-panel">
+                    <h4 style="color: white; margin: 0 0 0.5rem 0;">🎨 Visual Hierarchy</h4>
+                    <p style="color: #ccc; margin: 0; font-size: 0.9rem;">Clear typography scales, proper contrast ratios, and strategic use of whitespace</p>
+                </div>
+                
+                <div class="glass-panel">
+                    <h4 style="color: white; margin: 0 0 0.5rem 0;">⚡ Performance</h4>
+                    <p style="color: #ccc; margin: 0; font-size: 0.9rem;">Optimized animations, lazy loading, and efficient resource management</p>
+                </div>
+                
+                <div class="glass-panel">
+                    <h4 style="color: white; margin: 0 0 0.5rem 0;">📱 Accessibility</h4>
+                    <p style="color: #ccc; margin: 0; font-size: 0.9rem;">Keyboard navigation, proper ARIA labels, and focus indicators</p>
+                </div>
+                
+                <div class="glass-panel">
+                    <h4 style="color: white; margin: 0 0 0.5rem 0;">🎯 User Experience</h4>
+                    <p style="color: #ccc; margin: 0; font-size: 0.9rem;">Intuitive interactions, smooth transitions, and clear feedback</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Toolbar -->
+    <div class="bottom-toolbar">
+        <a href="./">Design Demo</a> • <a href="./projects">View Live</a>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

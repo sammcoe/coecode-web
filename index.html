@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coe Code - Application Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #000;
+            color: white;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo img {
+            height: 32px;
+            border-radius: 8px;
+        }
+
+        .logo-text {
+            font-weight: 500;
+        }
+
+        .logo-subtitle {
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .location {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .nav-link {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+            max-width: 800px;
+        }
+
+        .hero-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-keywords span {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 400;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+        }
+
+        .connect-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .connect-btn:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        /* Project Section */
+        .project-section {
+            padding: 2rem 0;
+        }
+
+        .project-label {
+            color: #999;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 60vh;
+            min-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-info {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-subtitle {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 0 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Bottom Toolbar */
+        .bottom-toolbar {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .bottom-toolbar a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .bottom-toolbar a:hover {
+            color: white;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .hero-keywords {
+                justify-content: center;
+            }
+            
+            .project-image {
+                height: 40vh;
+                min-height: 300px;
+            }
+            
+            .project-info {
+                left: 1rem;
+                right: 1rem;
+                bottom: 1rem;
+                padding: 1.5rem;
+            }
+            
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            /* Enhanced mobile styles */
+            header {
+                padding: 1.5rem 0 !important;
+            }
+            
+            header img {
+                height: 28px !important;
+            }
+            
+            header > div:nth-child(2) {
+                font-size: 0.75rem !important;
+            }
+            
+            header > a:last-child {
+                font-size: 0.85rem !important;
+            }
+            
+            main {
+                padding: 3rem 0 !important;
+            }
+            
+            main h1 {
+                font-size: clamp(2rem, 8vw, 3rem) !important;
+                text-align: center;
+                margin-bottom: 3rem !important;
+            }
+            
+            main > div:first-of-type {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            main > div:first-of-type > a > div,
+            main > div:first-of-type > div {
+                padding: 1.5rem !important;
+                border-radius: 16px !important;
+            }
+            
+            main > div:first-of-type img {
+                width: 100px !important;
+                height: 100px !important;
+            }
+            
+            main > div:first-of-type h2 {
+                font-size: 1.5rem !important;
+            }
+            
+            main > div:first-of-type p {
+                font-size: 0.9rem !important;
+            }
+            
+            main > div:last-of-type {
+                padding: 2rem 0 !important;
+            }
+            
+            main > div:last-of-type h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            main > div:last-of-type p {
+                font-size: 0.9rem !important;
+            }
+            
+            main > div:last-of-type a {
+                padding: 0.8rem 1.5rem !important;
+                font-size: 0.9rem !important;
+            }
+            
+            footer {
+                padding: 2rem 0 1rem !important;
+                text-align: center;
+                font-size: 0.8rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header style="display: flex; justify-content: space-between; align-items: center; padding: 2rem 0; border-bottom: 1px solid #333;">
+            <a href="./" style="display: flex; align-items: center; text-decoration: none; color: white;">
+                <img src="images/logo.png" alt="Coe Code" style="height: 32px; border-radius: 8px;">
+                <div style="margin-left: 1rem;">
+                    <div style="font-weight: 500;">Coe Code</div>
+                    <div style="font-size: 0.8rem; color: #999;">Application Studio</div>
+                </div>
+            </a>
+            <div style="font-size: 0.8rem; color: #666;">KL, MY • 4.2105° N • 101.9758° E</div>
+            <a href="./connect.html" style="color: #ccc; text-decoration: none; font-size: 0.9rem;">Connect</a>
+        </header>
+
+        <!-- Main Content -->
+        <main style="padding: 4rem 0;">
+            <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 400; margin-bottom: 2rem;">Projects</h1>
+            
+            <!-- Projects Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                <!-- Linc Project Card -->
+                <a href="./linc.html" style="text-decoration: none; color: inherit;">
+                    <div style="background: #111; border-radius: 20px; padding: 2rem; border: 1px solid #333; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.borderColor='#555'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#333'; this.style.transform='translateY(0)'">
+                        <div style="text-align: center; margin-bottom: 1.5rem;">
+                            <img src="images/linc-thumbnail.png" alt="Linc App" style="width: 120px; height: 120px; border-radius: 20px; object-fit: cover;">
+                        </div>
+                        <h2 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 0.5rem; text-align: center;">Linc</h2>
+                        <p style="font-size: 1rem; color: #ccc; margin-bottom: 1rem; text-align: center;">Friendship Tracker</p>
+                        <p style="font-size: 0.9rem; color: #888; line-height: 1.5; text-align: center;">Healthy, happy relationships. Track interactions, set reminders, and never lose touch with the people who matter most.</p>
+                        <div style="margin-top: 1.5rem; text-align: center;">
+                            <span style="display: inline-block; background: rgba(255,255,255,0.1); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; color: #ccc;">iPhone • iPad • Vision Pro</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Coming Soon Card -->
+                <div style="background: #111; border-radius: 20px; padding: 2rem; border: 1px solid #333; opacity: 0.6;">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <div style="width: 120px; height: 120px; border-radius: 20px; background: #222; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="#666">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h2 style="font-size: 1.8rem; font-weight: 400; margin-bottom: 0.5rem; text-align: center; color: #666;">Coming Soon</h2>
+                    <p style="font-size: 1rem; color: #555; margin-bottom: 1rem; text-align: center;">New Project</p>
+                    <p style="font-size: 0.9rem; color: #555; line-height: 1.5; text-align: center;">We're working on something new. Stay tuned for updates on our next innovative mobile experience.</p>
+                    <div style="margin-top: 1.5rem; text-align: center;">
+                        <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; color: #555;">In Development</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div style="text-align: center; padding: 3rem 0;">
+                <h3 style="font-size: 1.5rem; font-weight: 400; margin-bottom: 1rem; color: #ccc;">Have a project in mind?</h3>
+                <p style="font-size: 1rem; color: #888; margin-bottom: 2rem;">Let's discuss how we can bring your mobile app idea to life</p>
+                <a href="./connect.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #fff; color: #000; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 500; transition: all 0.3s ease;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#fff'">
+                    <span style="font-size: 1.2rem;">+</span>
+                    Start a Project
+                </a>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer style="padding: 4rem 0 2rem; border-top: 1px solid #333; color: #666; font-size: 0.9rem;">
+            © 2023 Coe Code LLC
+        </footer>
+    </div>
+
+    <!-- Bottom Toolbar -->
+    <div style="position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.9); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15); border-radius: 50px; padding: 1rem 2rem; font-size: 0.9rem; z-index: 1000; display: flex; align-items: center; gap: 2rem;">
+        <a href="./" style="color: #fff; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            Home
+        </a>
+        <a href="./projects.html" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+            </svg>
+            Projects
+        </a>
+        <a href="./linc.html" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            Linc
+        </a>
+        <a href="./connect.html" style="color: #ccc; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            Connect
+        </a>
+    </div>
+</body>
+</html> 
