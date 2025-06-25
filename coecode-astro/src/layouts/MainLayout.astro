@@ -1,0 +1,23 @@
+---
+import Layout from './Layout.astro';
+import Header from '../components/Header.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  
+  <main class="min-h-screen">
+    <slot />
+  </main>
+  
+  <footer class="text-center py-8 text-white/50 text-sm border-t border-white/10">
+    © 2023 Coe Code LLC
+  </footer>
+</Layout> 

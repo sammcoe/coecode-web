@@ -1,0 +1,63 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<MainLayout title="Projects - Coe Code" description="Explore our portfolio of mobile applications and development projects.">
+  <section class="max-w-6xl mx-auto px-6 pt-12 pb-16">
+    <!-- Page Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Our <span class="text-yellow-400">Projects</span>
+      </h1>
+      <p class="text-xl text-white/70 max-w-2xl mx-auto">
+        A collection of mobile applications and digital experiences we've crafted with care.
+      </p>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ProjectCard
+        title="Linc - Friendship Tracker"
+        description="Stay connected with the people who matter most. Track interactions and never lose touch."
+        image="/images/linc-thumbnail.png"
+        href="/linc"
+      />
+      
+      <ProjectCard
+        title="Coming Soon"
+        description="We're always working on new and exciting projects. Stay tuned for more amazing apps."
+        image="/images/bg1.png"
+        href="#"
+      />
+      
+      <ProjectCard
+        title="Custom Solutions"
+        description="Need something specific? We create custom mobile solutions tailored to your unique needs."
+        image="/images/bg2.png"
+        href="/connect"
+      />
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6">Have a project in mind?</h2>
+      <p class="text-white/70 mb-8 max-w-2xl mx-auto">
+        Let's discuss how we can bring your mobile app idea to life with beautiful design and solid engineering.
+      </p>
+      <a 
+        href="/connect" 
+        class="
+          inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 
+          rounded-xl font-semibold transition-all duration-300 hover:transform hover:scale-105
+          shadow-lg hover:shadow-xl
+        "
+      >
+        <span>Start a Project</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+</MainLayout> 

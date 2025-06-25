@@ -1,0 +1,152 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Linc - Friendship Tracker" description="A beautiful iOS app that helps you maintain meaningful connections with the people who matter most.">
+  <section class="max-w-6xl mx-auto px-6 pt-12 pb-16">
+    <!-- Project Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="text-yellow-400">Linc</span>
+        <span class="block text-3xl md:text-4xl text-white/80 font-normal mt-2">Friendship Tracker</span>
+      </h1>
+      <p class="text-xl text-white/70 max-w-3xl mx-auto mb-8">
+        A beautiful iOS app that helps you maintain meaningful connections with the people who matter most. 
+        Track interactions, set reminders, and never lose touch again.
+      </p>
+      
+      <!-- App Store Link -->
+      <a 
+        href="https://apps.apple.com/us/app/linc-friendship-tracker/id1513780616" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block hover:scale-105 transition-transform duration-300"
+      >
+        <img 
+          src="/images/appstore-badge.webp" 
+          alt="Download on the App Store" 
+          class="h-16 mx-auto"
+        />
+      </a>
+    </div>
+
+    <!-- Hero Images -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div class="relative group">
+        <img 
+          src="/images/linc-hero1.png" 
+          alt="Linc App Screenshot 1" 
+          class="w-full rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+      <div class="relative group">
+        <img 
+          src="/images/linc-hero2.png" 
+          alt="Linc App Screenshot 2" 
+          class="w-full rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="space-y-16">
+      <!-- Feature 1 -->
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Stay Connected</h2>
+          <p class="text-lg text-white/70 mb-6 leading-relaxed">
+            Never lose touch with your friends and family. Linc helps you track when you last 
+            spoke with someone and reminds you to reach out when it's been too long.
+          </p>
+          <ul class="space-y-3 text-white/80">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Track interactions with friends and family
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Set custom reminder intervals
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Beautiful, intuitive interface
+            </li>
+          </ul>
+        </div>
+        <div class="lg:w-1/2">
+          <img 
+            src="/images/linc-feature1.png" 
+            alt="Linc Feature 1" 
+            class="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
+          />
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Smart Reminders</h2>
+          <p class="text-lg text-white/70 mb-6 leading-relaxed">
+            Intelligent notifications that learn your communication patterns and help you 
+            maintain relationships without being overwhelming.
+          </p>
+          <ul class="space-y-3 text-white/80">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Customizable notification schedules
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Privacy-focused design
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Works offline
+            </li>
+          </ul>
+        </div>
+        <div class="lg:w-1/2">
+          <img 
+            src="/images/linc-feature2.png" 
+            alt="Linc Feature 2" 
+            class="w-full max-w-sm mx-auto rounded-2xl shadow-2xl"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub Navigation -->
+    <div class="flex flex-wrap gap-6 justify-center mt-16 pt-16 border-t border-white/10">
+      <a 
+        href="/linc/about" 
+        class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+      >
+        About
+      </a>
+      <a 
+        href="/linc/press" 
+        class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+      >
+        Press
+      </a>
+      <a 
+        href="/privacy" 
+        class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+      >
+        Privacy
+      </a>
+    </div>
+  </section>
+</MainLayout> 
