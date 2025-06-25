@@ -1,0 +1,334 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Fitscape - Retro RPG Fitness Tracker" description="Transform your fitness journey into an epic RPG adventure. Level up your character by living a healthier life in real time.">
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-green-900 opacity-80"></div>
+    <div class="absolute inset-0">
+      <div class="absolute top-10 left-10 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+      <div class="absolute top-32 right-20 w-1 h-1 bg-green-400 rounded-full animate-ping"></div>
+      <div class="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-blue-400 rounded-full animate-pulse"></div>
+      <div class="absolute top-1/2 right-10 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
+      <div class="absolute bottom-32 right-1/3 w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <!-- Logo/Title -->
+      <div class="mb-8">
+        <h1 class="text-6xl md:text-8xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-green-400 to-blue-400 font-mono tracking-wider">
+          FITSCAPE
+        </h1>
+        <div class="text-xl md:text-2xl text-green-400 font-mono mb-2">
+          ▶ RETRO FITNESS RPG ◀
+        </div>
+        <div class="text-lg text-white/80 font-mono">
+          Level Up Your Life • Gain Real XP • Epic Adventures Await
+        </div>
+      </div>
+
+      <!-- Tagline -->
+      <p class="text-2xl md:text-3xl text-white mb-8 leading-relaxed max-w-4xl mx-auto">
+        Transform your <span class="text-yellow-400 font-bold">fitness journey</span> into an 
+        <span class="text-green-400 font-bold">epic RPG adventure</span>. 
+        Level up your character by living a healthier life in real time.
+      </p>
+
+      <!-- Features Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+        <div class="bg-black/40 border-2 border-green-400 rounded-lg p-6 backdrop-blur-sm">
+          <div class="text-3xl mb-3">⚔️</div>
+          <h3 class="text-green-400 font-bold mb-2 font-mono">REAL XP GAINS</h3>
+          <p class="text-white/80 text-sm">Every step, workout, and healthy choice earns you experience points</p>
+        </div>
+        <div class="bg-black/40 border-2 border-blue-400 rounded-lg p-6 backdrop-blur-sm">
+          <div class="text-3xl mb-3">🏃‍♂️</div>
+          <h3 class="text-blue-400 font-bold mb-2 font-mono">HEALTHKIT SYNC</h3>
+          <p class="text-white/80 text-sm">Automatically tracks your fitness data and converts it to game progress</p>
+        </div>
+        <div class="bg-black/40 border-2 border-purple-400 rounded-lg p-6 backdrop-blur-sm">
+          <div class="text-3xl mb-3">🎮</div>
+          <h3 class="text-purple-400 font-bold mb-2 font-mono">RETRO VIBES</h3>
+          <p class="text-white/80 text-sm">Classic 8-bit aesthetics meet modern fitness tracking technology</p>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="bg-black/60 border-2 border-yellow-400 rounded-2xl p-8 backdrop-blur-md max-w-2xl mx-auto">
+        <h2 class="text-3xl font-bold text-yellow-400 mb-4 font-mono">
+          🚀 JOIN THE BETA QUEST
+        </h2>
+        <p class="text-white/90 mb-6 text-lg">
+          Be among the first adventurers to experience the future of fitness gaming. 
+          Get exclusive early access and help shape the ultimate RPG fitness experience.
+        </p>
+        
+        <!-- Email Collection Form -->
+        <form 
+          class="space-y-4"
+          method="POST"
+          netlify
+          netlify-honeypot="bot-field"
+          name="fitscape-beta"
+          x-data="{ 
+            submitting: false,
+            success: false,
+            error: false,
+            async submitForm(event) {
+              this.submitting = true;
+              this.error = false;
+              
+              try {
+                const formData = new FormData(event.target);
+                
+                // Try Netlify first
+                const response = await fetch('/', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                  body: new URLSearchParams(formData).toString()
+                });
+                
+                if (response.ok) {
+                  this.success = true;
+                  event.target.reset();
+                  setTimeout(() => this.success = false, 5000);
+                } else {
+                  throw new Error('Form submission failed');
+                }
+              } catch (err) {
+                // Fallback to email
+                const email = formData.get('email');
+                const name = formData.get('name');
+                
+                const subject = 'Fitscape Beta Access Request';
+                const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0APlease add me to the Fitscape beta list!`;
+                
+                window.location.href = `mailto:contact@coecode.io?subject=${encodeURIComponent(subject)}&body=${body}`;
+                
+                this.error = true;
+                setTimeout(() => this.error = false, 5000);
+              }
+              
+              this.submitting = false;
+            }
+          }"
+          @submit.prevent="submitForm($event)"
+        >
+          <!-- Netlify bot protection -->
+          <input type="hidden" name="form-name" value="fitscape-beta" />
+          <div style="display: none;">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <input 
+              type="text" 
+              name="name" 
+              placeholder="Enter your adventurer name"
+              required
+              class="
+                flex-1 px-4 py-3 bg-black/50 border-2 border-white/30 rounded-lg 
+                focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/50
+                text-white placeholder-white/60 font-mono
+                transition-all duration-300
+              "
+            />
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="your.email@domain.com"
+              required
+              class="
+                flex-1 px-4 py-3 bg-black/50 border-2 border-white/30 rounded-lg 
+                focus:outline-none focus:border-yellow-400 focus:ring-2 focus:ring-yellow-400/50
+                text-white placeholder-white/60 font-mono
+                transition-all duration-300
+              "
+            />
+          </div>
+
+          <button 
+            type="submit"
+            :disabled="submitting"
+            class="
+              w-full px-8 py-4 bg-gradient-to-r from-yellow-500 to-green-500 
+              hover:from-yellow-400 hover:to-green-400 text-black font-bold rounded-lg 
+              transition-all duration-300 hover:transform hover:scale-[1.02]
+              disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
+              flex items-center justify-center gap-3 font-mono text-lg
+              border-2 border-yellow-400 hover:border-yellow-300
+              shadow-lg hover:shadow-yellow-400/25
+            "
+          >
+            <span x-show="!submitting">🎮 START MY ADVENTURE</span>
+            <span x-show="submitting">⏳ JOINING QUEST...</span>
+            <svg 
+              x-show="submitting" 
+              class="animate-spin w-5 h-5" 
+              fill="none" 
+              viewBox="0 0 24 24"
+            >
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </button>
+
+          <!-- Success Message -->
+          <div 
+            x-show="success" 
+            x-transition
+            class="p-4 bg-green-600/20 border-2 border-green-400 rounded-lg text-green-400"
+          >
+            <div class="flex items-center gap-2 font-mono">
+              <span class="text-xl">✅</span>
+              <span>Quest accepted! Check your email for beta access details.</span>
+            </div>
+          </div>
+
+          <!-- Error Message -->
+          <div 
+            x-show="error" 
+            x-transition
+            class="p-4 bg-red-600/20 border-2 border-red-400 rounded-lg text-red-400"
+          >
+            <div class="flex items-center gap-2 font-mono">
+              <span class="text-xl">⚠️</span>
+              <span>Connection failed. Opening backup communication channel...</span>
+            </div>
+          </div>
+        </form>
+
+        <p class="text-white/60 text-sm mt-4 font-mono">
+          No spam, just epic updates • Unsubscribe anytime • Beta launches Q1 2025
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 font-mono">
+        ⚡ GAME FEATURES ⚡
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Character Progression -->
+        <div class="bg-gradient-to-br from-purple-900/50 to-blue-900/50 border border-purple-400/30 rounded-xl p-6 backdrop-blur-sm hover:border-purple-400 transition-colors">
+          <div class="text-4xl mb-4">📈</div>
+          <h3 class="text-xl font-bold text-purple-400 mb-3 font-mono">CHARACTER STATS</h3>
+          <p class="text-white/80 mb-4">
+            Your real fitness data powers RPG stats like Strength, Dexterity, and Constitution. 
+            Get stronger in real life, get stronger in-game.
+          </p>
+          <div class="text-sm text-purple-300 font-mono">
+            STR: 💪 | DEX: 🏃 | CON: ❤️ | INT: 🧠
+          </div>
+        </div>
+
+        <!-- Equipment System -->
+        <div class="bg-gradient-to-br from-yellow-900/50 to-orange-900/50 border border-yellow-400/30 rounded-xl p-6 backdrop-blur-sm hover:border-yellow-400 transition-colors">
+          <div class="text-4xl mb-4">⚔️</div>
+          <h3 class="text-xl font-bold text-yellow-400 mb-3 font-mono">EPIC LOOT</h3>
+          <p class="text-white/80 mb-4">
+            Unlock weapons, armor, and magical items by hitting fitness milestones. 
+            Customize your character with sprite-based equipment.
+          </p>
+          <div class="text-sm text-yellow-300 font-mono">
+            🗡️ SWORD +5 | 🛡️ SHIELD +3 | 👑 CROWN OF GAINS
+          </div>
+        </div>
+
+        <!-- Quest System -->
+        <div class="bg-gradient-to-br from-green-900/50 to-teal-900/50 border border-green-400/30 rounded-xl p-6 backdrop-blur-sm hover:border-green-400 transition-colors">
+          <div class="text-4xl mb-4">📜</div>
+          <h3 class="text-xl font-bold text-green-400 mb-3 font-mono">DAILY QUESTS</h3>
+          <p class="text-white/80 mb-4">
+            Complete daily and weekly challenges based on your fitness goals. 
+            Every quest completed brings you closer to legendary status.
+          </p>
+          <div class="text-sm text-green-300 font-mono">
+            📋 ACTIVE: Walk 8,000 steps | Sleep 7+ hours
+          </div>
+        </div>
+
+        <!-- Social Features -->
+        <div class="bg-gradient-to-br from-pink-900/50 to-red-900/50 border border-pink-400/30 rounded-xl p-6 backdrop-blur-sm hover:border-pink-400 transition-colors">
+          <div class="text-4xl mb-4">👥</div>
+          <h3 class="text-xl font-bold text-pink-400 mb-3 font-mono">GUILD SYSTEM</h3>
+          <p class="text-white/80 mb-4">
+            Team up with friends, compete on leaderboards, and motivate each other 
+            to reach new fitness heights together.
+          </p>
+          <div class="text-sm text-pink-300 font-mono">
+            🏆 LEADERBOARD | 🤝 FRIEND CHALLENGES
+          </div>
+        </div>
+
+        <!-- HealthKit Integration -->
+        <div class="bg-gradient-to-br from-blue-900/50 to-indigo-900/50 border border-blue-400/30 rounded-xl p-6 backdrop-blur-sm hover:border-blue-400 transition-colors">
+          <div class="text-4xl mb-4">📱</div>
+          <h3 class="text-xl font-bold text-blue-400 mb-3 font-mono">AUTO SYNC</h3>
+          <p class="text-white/80 mb-4">
+            Seamlessly connects with Apple Health to track steps, workouts, sleep, 
+            heart rate, and more. Your health data becomes your game data.
+          </p>
+          <div class="text-sm text-blue-300 font-mono">
+            ❤️ HEART RATE | 😴 SLEEP | 🏃 WORKOUTS
+          </div>
+        </div>
+
+        <!-- Retro Aesthetics -->
+        <div class="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 border border-indigo-400/30 rounded-xl p-6 backdrop-blur-sm hover:border-indigo-400 transition-colors">
+          <div class="text-4xl mb-4">🎨</div>
+          <h3 class="text-xl font-bold text-indigo-400 mb-3 font-mono">PIXEL PERFECT</h3>
+          <p class="text-white/80 mb-4">
+            Beautiful retro pixel art, chiptune music, and classic RPG interfaces 
+            bring nostalgic gaming vibes to modern fitness tracking.
+          </p>
+          <div class="text-sm text-indigo-300 font-mono">
+            🎮 8-BIT GRAPHICS | 🎵 CHIPTUNE AUDIO
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="py-20 bg-gradient-to-t from-black via-gray-900 to-black">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-green-400 font-mono">
+        🏆 READY TO LEVEL UP? 🏆
+      </h2>
+      <p class="text-xl text-white/80 mb-8 leading-relaxed">
+        Join thousands of adventurers who are already transforming their fitness journey 
+        into the ultimate RPG experience. Your epic adventure starts here.
+      </p>
+      
+      <div class="bg-black/60 border-2 border-yellow-400 rounded-2xl p-8 backdrop-blur-md">
+        <div class="text-6xl mb-4">🎮</div>
+        <h3 class="text-2xl font-bold text-yellow-400 mb-4 font-mono">
+          BETA ACCESS LAUNCHING SOON
+        </h3>
+        <p class="text-white/90 mb-6">
+          Get notified the moment Fitscape beta goes live. Limited spots available for the ultimate fitness RPG experience.
+        </p>
+        <a 
+          href="#" 
+          onclick="document.querySelector('input[name=email]').focus(); return false;"
+          class="
+            inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 
+            hover:from-green-400 hover:to-blue-400 text-white font-bold rounded-lg 
+            transition-all duration-300 hover:transform hover:scale-105
+            border-2 border-green-400 hover:border-green-300
+            shadow-lg hover:shadow-green-400/25 font-mono text-lg
+          "
+        >
+          <span>⬆️ SCROLL UP TO JOIN BETA</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</MainLayout> 
