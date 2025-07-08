@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "3S44863Y46.com.coecode.fitscape",
+        "paths": [
+          "/fitscape",
+          "/fitscape/",
+          "/fitscape/*",
+          "*"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "3S44863Y46.com.coecode.fitscape"
+    ]
+  }
+}
