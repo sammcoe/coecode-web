@@ -8,14 +8,22 @@
           "/fitscape",
           "/fitscape/",
           "/fitscape/*",
+          "/friend-request*",
           "*"
+        ]
+      },
+      {
+        "appID": "3S44863Y46.com.coecode.fitscape.alpha",
+        "paths": [
+          "/friend-request*"
         ]
       }
     ]
   },
   "webcredentials": {
     "apps": [
-      "3S44863Y46.com.coecode.fitscape"
+      "3S44863Y46.com.coecode.fitscape",
+      "3S44863Y46.com.coecode.fitscape.alpha"
     ]
   }
 }
