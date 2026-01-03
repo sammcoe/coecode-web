@@ -1,0 +1,229 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="BrewLogica Privacy Policy - Coe Code" description="Privacy policy for BrewLogica - the AI-powered coffee logging app for serious home brewers.">
+  <section class="max-w-4xl mx-auto px-6 pt-12 pb-16">
+    <!-- Page Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="text-[#FF5A5A]">BrewLogica</span> Privacy <span class="text-[#00DDEB]">Policy</span>
+      </h1>
+      <p class="text-xl text-white/70 max-w-2xl mx-auto">
+        Your coffee data is yours. We're committed to protecting your privacy.
+      </p>
+    </div>
+
+    <!-- Privacy Content -->
+    <div class="prose prose-lg max-w-none">
+      <div class="bg-white/5 rounded-2xl border border-white/10 p-8 mb-8">
+        <p class="text-sm text-white/60 mb-6">Last updated: January 2025</p>
+
+        <div class="space-y-8 text-white/80">
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">Our Commitment to Your Privacy</h2>
+            <p class="leading-relaxed">
+              At Coe Code, we believe your brewing data is personal and should remain under your control.
+              This privacy policy explains how BrewLogica collects, uses, and protects your information
+              as you track your coffee journey.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">Information We Collect</h2>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#FF5A5A]">Coffee and Brewing Data</h3>
+            <p class="leading-relaxed mb-4">
+              BrewLogica stores information about your coffee beans and brewing sessions:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+              <li>Bean details (roaster, origin, process, variety, roast date)</li>
+              <li>Bag information (weight, purchase date, price)</li>
+              <li>Brew logs (method, parameters, ratings, notes)</li>
+              <li>Photos of coffee bags and labels</li>
+              <li>Grinder and equipment information</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#00DDEB]">Account Information</h3>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+              <li>Email address (for account creation and login)</li>
+              <li>Display name (optional)</li>
+              <li>Subscription status</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#8A4AF3]">AI Feature Usage</h3>
+            <p class="leading-relaxed mb-4">
+              When you use AI features, we process:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+              <li>Photos submitted for label parsing (processed by AI, not stored after extraction)</li>
+              <li>Text submitted for brew parsing</li>
+              <li>AI usage counts for subscription management</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#00FF7F]">Device and Usage Information</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Device type and iOS version</li>
+              <li>App version</li>
+              <li>Crash reports and performance data</li>
+              <li>Anonymous usage analytics</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">How We Use Your Information</h2>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Core Features:</strong> Store and sync your beans, brews, and insights across devices</li>
+              <li><strong>AI Features:</strong> Process photos and text to extract coffee information</li>
+              <li><strong>Insights:</strong> Generate resting profiles and brewing analytics</li>
+              <li><strong>App Improvement:</strong> Analyze anonymous usage to improve features</li>
+              <li><strong>Support:</strong> Provide customer support and troubleshooting</li>
+              <li><strong>Security:</strong> Protect against fraud and abuse</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">Data Storage and Security</h2>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#FF5A5A]">Local Storage</h3>
+            <p class="leading-relaxed mb-4">
+              Your coffee data is stored locally on your device using SwiftData. The app works fully
+              offline—you can log brews without an internet connection.
+            </p>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#00DDEB]">Cloud Sync</h3>
+            <p class="leading-relaxed mb-4">
+              When you create an account, your data is securely synchronized using Supabase:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+              <li>End-to-end encryption in transit (TLS 1.3)</li>
+              <li>Encrypted at rest in PostgreSQL database</li>
+              <li>Row-level security ensures you only access your own data</li>
+              <li>Regular security audits and backups</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#8A4AF3]">AI Processing</h3>
+            <p class="leading-relaxed mb-4">
+              Photos submitted for AI label parsing are:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Sent securely to our AI processing service</li>
+              <li>Processed to extract text and coffee information</li>
+              <li>Not stored after processing is complete</li>
+              <li>Not used to train AI models</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">Data Sharing and Third Parties</h2>
+            <p class="leading-relaxed mb-4">
+              We do not sell your personal data. Limited sharing occurs only for:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Supabase:</strong> Cloud database and authentication (data storage)</li>
+              <li><strong>Anthropic:</strong> AI processing for label and brew parsing</li>
+              <li><strong>Apple:</strong> App Store subscriptions and payments</li>
+              <li><strong>Legal Requirements:</strong> When required by law or legal process</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">Your Rights and Controls</h2>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#FF5A5A]">Data Access and Export</h3>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+              <li>View all your data within the app</li>
+              <li>Export your beans and brews (coming soon)</li>
+              <li>Request a copy of all stored data</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#00DDEB]">Account Management</h3>
+            <ul class="list-disc pl-6 space-y-2 mb-6">
+              <li>Delete your account and all associated data</li>
+              <li>Use the app without an account (local-only mode)</li>
+              <li>Manage subscription through App Store</li>
+            </ul>
+
+            <h3 class="text-lg font-semibold mb-3 text-[#8A4AF3]">AI Feature Control</h3>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>AI features are opt-in (you choose when to use them)</li>
+              <li>Manual entry always available as alternative</li>
+              <li>View AI usage history in settings</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">Data Retention</h2>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Account data retained while your account is active</li>
+              <li>Data deleted within 30 days of account deletion request</li>
+              <li>Backups retained for 90 days for disaster recovery</li>
+              <li>Anonymous analytics may be retained indefinitely</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">Children's Privacy</h2>
+            <p class="leading-relaxed">
+              BrewLogica is intended for users 13 and older. We do not knowingly collect personal
+              information from children under 13. If you believe a child has provided information
+              to us, please contact us immediately.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">International Data Transfers</h2>
+            <p class="leading-relaxed">
+              Your data may be processed in the United States where our servers are located.
+              We ensure appropriate safeguards are in place to protect your data according to
+              applicable privacy laws.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">Changes to This Policy</h2>
+            <p class="leading-relaxed">
+              We may update this privacy policy to reflect changes in our practices. Significant
+              changes will be communicated through the app. Your continued use of BrewLogica after
+              changes constitutes acceptance of the updated policy.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-2xl font-bold mb-4 text-white">Contact Us</h2>
+            <p class="leading-relaxed mb-4">
+              If you have questions about this privacy policy, please contact us:
+            </p>
+            <div class="bg-white/5 rounded-lg p-4 border border-white/10">
+              <p><strong>Email:</strong> <a href="mailto:privacy@coecode.io" class="text-[#FF5A5A] hover:text-[#E54848]">privacy@coecode.io</a></p>
+              <p><strong>Support:</strong> <a href="mailto:support@coecode.io?subject=BrewLogica Privacy" class="text-[#00DDEB] hover:text-[#00B8C4]">support@coecode.io</a></p>
+              <p><strong>Address:</strong> Coe Code LLC, Missoula, Montana, USA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="flex flex-wrap gap-4 justify-center mt-16 pt-8 border-t border-white/10">
+      <a
+        href="/brewlogica"
+        class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+      >
+        Back to BrewLogica
+      </a>
+      <a
+        href="/brewlogica/terms"
+        class="px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-colors"
+      >
+        Terms of Use
+      </a>
+      <a
+        href="/connect"
+        class="px-6 py-3 bg-[#FF5A5A] hover:bg-[#E54848] rounded-lg transition-colors"
+      >
+        Contact Us
+      </a>
+    </div>
+  </section>
+</MainLayout>
