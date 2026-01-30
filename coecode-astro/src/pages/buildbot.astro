@@ -1,0 +1,280 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="BuildBot - Menu Bar Build Companion" description="A lightweight macOS menu bar app for building and deploying iOS and Android apps with one click.">
+  <section class="max-w-6xl mx-auto px-6 pt-12 pb-16">
+    <!-- Project Header -->
+    <div class="text-center mb-16">
+      <img
+        src="/images/buildbot-icon.png"
+        alt="BuildBot Icon"
+        class="w-32 h-32 mx-auto mb-6 rounded-3xl shadow-2xl"
+      />
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <span class="text-orange-400">BuildBot</span>
+        <span class="block text-3xl md:text-4xl text-white/80 font-normal mt-2">Menu Bar Build Companion</span>
+      </h1>
+      <p class="text-xl text-white/70 max-w-3xl mx-auto mb-8">
+        Build and deploy iOS and Android apps from your menu bar. No more switching to Xcode
+        just to hit ⌘R. One click to build, install, and launch on any device.
+      </p>
+
+      <!-- Download Button -->
+      <a
+        href="https://github.com/sammcoe/BuildBot/releases/latest/download/BuildBot.dmg"
+        class="inline-flex items-center gap-3 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-orange-500/25"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        Download for macOS
+      </a>
+      <p class="text-sm text-white/50 mt-3">Requires macOS 13.0 (Ventura) or later</p>
+    </div>
+
+    <!-- Hero Screenshot -->
+    <div class="relative mb-16">
+      <div class="bg-gradient-to-br from-orange-500/20 to-purple-500/20 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
+        <div class="bg-gray-900 rounded-2xl p-6 shadow-2xl">
+          <!-- Mock Menu Bar -->
+          <div class="flex items-center gap-4 mb-4 pb-4 border-b border-white/10">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-white font-medium">BuildBot</span>
+            </div>
+          </div>
+          <!-- Mock Menu Items -->
+          <div class="space-y-2 text-white/80">
+            <div class="flex items-center justify-between p-3 hover:bg-white/5 rounded-lg">
+              <span>MyApp</span>
+              <span class="text-white/50 text-sm">▶</span>
+            </div>
+            <div class="flex items-center justify-between p-3 hover:bg-white/5 rounded-lg">
+              <span>AnotherProject</span>
+              <span class="text-white/50 text-sm">▶</span>
+            </div>
+            <div class="border-t border-white/10 my-2"></div>
+            <div class="p-3 text-white/50">Recent</div>
+            <div class="flex items-center gap-2 p-3 hover:bg-white/5 rounded-lg">
+              <span class="text-green-400">●</span>
+              <span>MyApp → iPhone 15 Pro</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="space-y-16">
+      <!-- Feature 1 -->
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">One-Click Builds</h2>
+          <p class="text-lg text-white/70 mb-6 leading-relaxed">
+            Select a project and device from your menu bar, and BuildBot handles the rest.
+            Build, install, and launch your app without ever opening Xcode or Android Studio.
+          </p>
+          <ul class="space-y-3 text-white/80">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Auto-discovers Xcode and Android projects
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Remembers your last device selection
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Keyboard shortcuts for recent destinations
+            </li>
+          </ul>
+        </div>
+        <div class="lg:w-1/2">
+          <div class="bg-gray-800/50 rounded-2xl p-6 border border-white/10">
+            <div class="space-y-3">
+              <div class="flex items-center gap-3 p-3 bg-orange-500/20 rounded-lg border border-orange-500/30">
+                <span class="text-orange-400 font-mono">⌘1</span>
+                <span class="text-white">MyApp → iPhone 15 Pro</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                <span class="text-white/50 font-mono">⌘2</span>
+                <span class="text-white/70">MyApp → iPad Air</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg">
+                <span class="text-white/50 font-mono">⌘3</span>
+                <span class="text-white/70">AndroidApp → Pixel 8</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Live Log Streaming</h2>
+          <p class="text-lg text-white/70 mb-6 leading-relaxed">
+            Watch build output and device logs in real-time. Filter by log level,
+            search for specific messages, and export logs for debugging.
+          </p>
+          <ul class="space-y-3 text-white/80">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Real-time build and device logs
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Filter by error, warning, info
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Native macOS notifications for build status
+            </li>
+          </ul>
+        </div>
+        <div class="lg:w-1/2">
+          <div class="bg-gray-800/50 rounded-2xl p-4 border border-white/10 font-mono text-sm">
+            <div class="flex items-center gap-2 mb-3 pb-2 border-b border-white/10">
+              <div class="w-3 h-3 rounded-full bg-red-500"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              <span class="text-white/50 ml-2">Build Logs</span>
+            </div>
+            <div class="space-y-1 text-xs">
+              <p class="text-white/50">[09:41:23] Compiling Swift sources...</p>
+              <p class="text-white/50">[09:41:25] Linking MyApp</p>
+              <p class="text-green-400">[09:41:26] ✓ Build succeeded</p>
+              <p class="text-white/50">[09:41:27] Installing on iPhone 15 Pro...</p>
+              <p class="text-green-400">[09:41:30] ✓ App launched</p>
+              <p class="text-blue-400">[09:41:31] MyApp: Application did finish launching</p>
+              <p class="text-blue-400">[09:41:32] MyApp: User logged in successfully</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Cross-Platform</h2>
+          <p class="text-lg text-white/70 mb-6 leading-relaxed">
+            Build iOS apps with Xcode and Android apps with Gradle, all from the same interface.
+            Perfect for cross-platform developers who work on both platforms.
+          </p>
+          <ul class="space-y-3 text-white/80">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              iOS Simulators and physical devices
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Android Emulators and physical devices
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Automatic SDK and toolchain detection
+            </li>
+          </ul>
+        </div>
+        <div class="lg:w-1/2">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-800/50 rounded-xl p-4 border border-white/10 text-center">
+              <svg class="w-12 h-12 mx-auto mb-3 text-white/80" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <p class="text-white font-medium">iOS</p>
+              <p class="text-white/50 text-sm">Xcode projects</p>
+            </div>
+            <div class="bg-gray-800/50 rounded-xl p-4 border border-white/10 text-center">
+              <svg class="w-12 h-12 mx-auto mb-3 text-white/80" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.341c-.5 0-.914.394-.914.883s.414.883.914.883.916-.394.916-.883-.416-.883-.916-.883zm-11.046 0c-.5 0-.914.394-.914.883s.414.883.914.883.916-.394.916-.883-.416-.883-.916-.883zm11.396-5.71L19.5 6.199a.498.498 0 00-.167-.676.495.495 0 00-.677.167l-1.651 3.467c-1.449-.66-3.073-1.026-4.805-1.026-1.732 0-3.356.366-4.805 1.026L5.744 5.69a.495.495 0 00-.677-.167.498.498 0 00-.167.676l1.627 3.432C3.818 11.196 2 13.832 2 16.831h20c0-2.999-1.818-5.635-4.527-7.2z"/>
+              </svg>
+              <p class="text-white font-medium">Android</p>
+              <p class="text-white/50 text-sm">Gradle projects</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Requirements Section -->
+    <div class="mt-20 pt-16 border-t border-white/10">
+      <h2 class="text-2xl font-bold mb-8 text-center">System Requirements</h2>
+      <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white/5 rounded-xl p-6 text-center">
+          <svg class="w-8 h-8 mx-auto mb-3 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <p class="text-white font-medium">macOS 13.0+</p>
+          <p class="text-white/50 text-sm">Ventura or later</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-6 text-center">
+          <svg class="w-8 h-8 mx-auto mb-3 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+          </svg>
+          <p class="text-white font-medium">Xcode (for iOS)</p>
+          <p class="text-white/50 text-sm">Command line tools</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-6 text-center">
+          <svg class="w-8 h-8 mx-auto mb-3 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+          </svg>
+          <p class="text-white font-medium">Android SDK (optional)</p>
+          <p class="text-white/50 text-sm">For Android builds</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="mt-20 text-center">
+      <a
+        href="https://github.com/sammcoe/BuildBot/releases/latest/download/BuildBot.dmg"
+        class="inline-flex items-center gap-3 px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-orange-500/25"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        Download BuildBot
+      </a>
+      <div class="mt-6 flex justify-center gap-6">
+        <a
+          href="https://github.com/sammcoe/BuildBot"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white/60 hover:text-white transition-colors"
+        >
+          View on GitHub
+        </a>
+        <a
+          href="/privacy"
+          class="text-white/60 hover:text-white transition-colors"
+        >
+          Privacy Policy
+        </a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
