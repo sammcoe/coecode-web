@@ -25,13 +25,13 @@ const { title, description, image, href, featured = false } = Astro.props;
   @mouseleave="hover = false"
 >
   <!-- Image -->
-  <div class={featured ? 'md:w-1/2' : 'w-full'}>
-    <img 
-      src={image} 
+  <div class={`${featured ? 'md:w-1/2 flex items-center justify-center' : 'w-full'}`}>
+    <img
+      src={image}
       alt={title}
       class={`
-        w-full transition-transform duration-500
-        ${featured ? 'rounded-xl' : 'aspect-video object-cover'}
+        transition-transform duration-500
+        ${featured ? 'rounded-xl max-w-[200px] w-full' : 'w-full aspect-video object-cover'}
       `}
       :class="hover ? 'scale-105' : 'scale-100'"
     />

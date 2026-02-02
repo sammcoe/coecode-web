@@ -3,22 +3,22 @@ import MainLayout from '../layouts/MainLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 ---
 
-<MainLayout title="Coe Code - Application Studio">
+<MainLayout title="CoeCode - Application Studio">
   <!-- Hero Section -->
   <section class="max-w-6xl mx-auto px-6 pt-12 pb-16">
     <div class="max-w-4xl">
       <!-- Status Indicator -->
       <div class="flex items-center gap-3 mb-8" x-data="{ pulse: true }">
-        <div 
+        <div
           class="w-3 h-3 bg-green-400 rounded-full"
           :class="pulse ? 'animate-pulse' : ''"
         ></div>
         <span class="text-white/80">Available for new work</span>
       </div>
-      
+
       <!-- Main Title -->
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-        Coe Code
+        Co<span class="text-yellow-400">d</span>e
         <span class="block text-yellow-400">Application Studio</span>
       </h1>
       
