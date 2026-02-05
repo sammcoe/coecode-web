@@ -15,11 +15,12 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
       <h1 class="text-4xl md:text-6xl font-bold mb-6">
         <span class="text-[#FF5A5A]">BrewLogica</span>
-        <span class="block text-3xl md:text-4xl text-white/80 font-normal mt-2">AI-Powered Coffee Logging</span>
+        <span class="block text-3xl md:text-4xl text-white/80 font-normal mt-2">Remember Your Best Brews</span>
       </h1>
       <p class="text-xl text-white/70 max-w-3xl mx-auto mb-8">
-        Track beans. Log brews. Discover what works. Your smart coffee lab notebook
-        that stays out of the way while you brew.
+        You know that perfect cup—the one where everything clicks.
+        Now you can make it again. BrewLogica removes the friction
+        between brewing and remembering.
       </p>
 
       <!-- CTA Links -->
@@ -54,15 +55,15 @@ import MainLayout from '../layouts/MainLayout.astro';
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
       <div class="relative group bg-gradient-to-br from-[#FF5A5A]/20 to-[#0D0D0D] rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
         <img
-          src="/images/brewlogica-hero1.png"
-          alt="BrewLogica Bean Tracking"
+          src="/images/brewlogica-hero-brew-timer.png"
+          alt="Select your beans before brewing"
           class="max-h-[500px] rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
         />
       </div>
       <div class="relative group bg-gradient-to-br from-[#00DDEB]/20 to-[#0D0D0D] rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
         <img
-          src="/images/brewlogica-hero2.png"
-          alt="BrewLogica Brew Logging"
+          src="/images/brewlogica-hero-beans.png"
+          alt="Live brew timer with Bluetooth scale integration"
           class="max-h-[500px] rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
         />
       </div>
@@ -73,38 +74,39 @@ import MainLayout from '../layouts/MainLayout.astro';
       <!-- Feature 1: Bean Tracking -->
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <div class="lg:w-1/2">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">Smart Bean Tracking</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Every Bean, Fully Documented</h2>
           <p class="text-lg text-white/70 mb-6 leading-relaxed">
-            Snap a photo of your bag label and let AI do the heavy lifting. BrewLogica doesn't just read
-            what's on the label—it searches for additional details like altitude, flavor notes, and
-            processing specifics that roasters don't always include.
+            Each coffee gets its own page—origin, roaster, days since roast,
+            your rating, and a cup profile you build over time. See at a glance
+            how many brews you've logged and your average score. No more
+            forgetting which Ethiopian was the good one.
           </p>
           <ul class="space-y-3 text-white/80">
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-[#FF5A5A] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              AI extracts and enriches bean details beyond the label
+              Track days rested and total brews per bag
             </li>
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-[#FF5A5A] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              Finds altitude, variety, and flavor notes automatically
+              Build cup profiles: blueberry, jasmine, honey...
             </li>
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-[#FF5A5A] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              Review and edit before saving—you're always in control
+              Rate each bean and see your average brew score
             </li>
           </ul>
         </div>
         <div class="lg:w-1/2">
           <div class="bg-gradient-to-br from-[#FF5A5A]/10 to-[#1A1A1A] rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
             <img
-              src="/images/brewlogica-feature1.png"
-              alt="BrewLogica Smart Bean Tracking"
+              src="/images/brewlogica-feature-bean-tracking.png"
+              alt="Bean details showing Yirgacheffe Natural with cup profile and ratings"
               class="max-h-[450px] rounded-2xl shadow-xl"
             />
           </div>
@@ -114,38 +116,38 @@ import MainLayout from '../layouts/MainLayout.astro';
       <!-- Feature 2: Brew Logging -->
       <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
         <div class="lg:w-1/2">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">Effortless Brew Logging</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Guided Brew Timer</h2>
           <p class="text-lg text-white/70 mb-6 leading-relaxed">
-            Log however works best for you. Speak your brew details, type free-form text, or enter
-            parameters manually. Our AI intelligently matches your input to the right fields—no rigid
-            forms to slow you down.
+            Follow recipes step by step with a visual timer that guides you through
+            bloom, pours, and draw-down. Your recipe parameters—grind, dose, water,
+            bloom time—are always visible. Just focus on the pour.
           </p>
           <ul class="space-y-3 text-white/80">
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-[#00DDEB] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              Speak, type, or tap—your choice
+              Visual phases: Bloom → Pour → Draw-down
             </li>
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-[#00DDEB] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              AI parses "18g in, 36g out, 28 seconds" into structured data
+              Recipe parameters always visible at the top
             </li>
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-[#00DDEB] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              Method-specific parameters for espresso, V60, AeroPress & more
+              Stop, pause, or skip ahead—you're in control
             </li>
           </ul>
         </div>
         <div class="lg:w-1/2">
           <div class="bg-gradient-to-br from-[#00DDEB]/10 to-[#1A1A1A] rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
             <img
-              src="/images/brewlogica-feature2.png"
-              alt="BrewLogica Effortless Brew Logging"
+              src="/images/brewlogica-feature-brew-logging.png"
+              alt="V60 guided brew timer showing bloom phase with recipe parameters"
               class="max-h-[450px] rounded-2xl shadow-xl"
             />
           </div>
@@ -155,38 +157,38 @@ import MainLayout from '../layouts/MainLayout.astro';
       <!-- Feature 3: Actionable Insights -->
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <div class="lg:w-1/2">
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">Actionable Insights</h2>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Know Every Bean's Sweet Spot</h2>
           <p class="text-lg text-white/70 mb-6 leading-relaxed">
-            Not just charts and numbers—real recommendations you can act on. BrewLogica analyzes your
-            beans, brew history, and preferences to surface specific suggestions that actually improve
-            your next cup.
+            Track how each coffee performs across methods and over its resting life.
+            See exactly when your Ethiopian natural hits peak for espresso versus when
+            it sings as a pour-over. Stop guessing. Start knowing.
           </p>
           <ul class="space-y-3 text-white/80">
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-[#8A4AF3] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              Specific, actionable suggestions—not vague stats
+              See when each bean peaks (day 10 vs day 15)
             </li>
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-[#8A4AF3] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              Context-aware: considers bean, method, grinder, and history
+              Method-specific insights (espresso vs pour-over)
             </li>
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-[#8A4AF3] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
-              Learns what "good" means for you, not generic advice
+              Your equipment, your preferences, your patterns
             </li>
           </ul>
         </div>
         <div class="lg:w-1/2">
           <div class="bg-gradient-to-br from-[#8A4AF3]/10 to-[#1A1A1A] rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
             <img
-              src="/images/brewlogica-feature3.png"
-              alt="BrewLogica Actionable Insights"
+              src="/images/brewlogica-feature-insights.png"
+              alt="AI insights showing Yirgacheffe past peak with grind recommendations for espresso and V60"
               class="max-h-[450px] rounded-2xl shadow-xl"
             />
           </div>
@@ -221,6 +223,60 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div class="bg-[#1A1A1A] rounded-xl p-6 text-center hover:bg-[#262626] transition-colors">
           <img src="/images/brewlogica-icons/ic_iced_coffee.svg" alt="Cold Brew" class="w-12 h-12 mx-auto mb-3 invert opacity-80" />
           <span class="text-white/80 text-sm">Cold Brew</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Features Gallery -->
+    <div class="mt-20 mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">More Ways to Elevate Your Coffee</h2>
+      <p class="text-lg text-white/60 text-center mb-12 max-w-2xl mx-auto">
+        Everything you need to track, refine, and remember your coffee journey.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-[#1A1A1A] rounded-xl p-4 hover:bg-[#262626] transition-colors group">
+          <div class="overflow-hidden rounded-lg mb-3">
+            <img
+              src="/images/brewlogica-equipment.png"
+              alt="Recipe library showing Kasuya 4:6 method and Coffee Bros Pour Over recipes"
+              class="rounded-lg transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+          <h3 class="text-white font-semibold mb-1">Import & Discover Recipes</h3>
+          <p class="text-white/60 text-sm">From YouTube, roaster sites, and expert baristas worldwide.</p>
+        </div>
+        <div class="bg-[#1A1A1A] rounded-xl p-4 hover:bg-[#262626] transition-colors group">
+          <div class="overflow-hidden rounded-lg mb-3">
+            <img
+              src="/images/brewlogica-recipes.png"
+              alt="Brew complete screen showing captured dose, bloom, grind, and temperature data"
+              class="rounded-lg transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+          <h3 class="text-white font-semibold mb-1">Capture Every Detail</h3>
+          <p class="text-white/60 text-sm">Timer captures dose, grind, bloom—or describe it in your words.</p>
+        </div>
+        <div class="bg-[#1A1A1A] rounded-xl p-4 hover:bg-[#262626] transition-colors group">
+          <div class="overflow-hidden rounded-lg mb-3">
+            <img
+              src="/images/brewlogica-brews-list.png"
+              alt="Bean collection showing Stumptown, Onyx, and Counter Culture bags"
+              class="rounded-lg transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+          <h3 class="text-white font-semibold mb-1">Track Your Collection</h3>
+          <p class="text-white/60 text-sm">Every bag, every origin, every roast—your coffee library.</p>
+        </div>
+        <div class="bg-[#1A1A1A] rounded-xl p-4 hover:bg-[#262626] transition-colors group">
+          <div class="overflow-hidden rounded-lg mb-3">
+            <img
+              src="/images/brewlogica-stats.png"
+              alt="Optimal resting insights with brewing stats showing weekly trends"
+              class="rounded-lg transition-transform duration-500 group-hover:scale-110"
+            />
+          </div>
+          <h3 class="text-white font-semibold mb-1">Insights When They Matter</h3>
+          <p class="text-white/60 text-sm">This bean peaked at day 12. That grind setting crushed it.</p>
         </div>
       </div>
     </div>
@@ -308,10 +364,10 @@ import MainLayout from '../layouts/MainLayout.astro';
     <!-- Final CTA Section -->
     <div class="mt-20 py-16 border-t border-white/10">
       <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to level up your coffee game?</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Your Best Cup Isn't Luck. It's Captured.</h2>
         <p class="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-          Join thousands of coffee enthusiasts who are tracking their brews,
-          discovering patterns, and making better coffee every day.
+          Whether you're dialing in espresso or exploring pour-over, BrewLogica
+          handles the busywork so you can focus on what matters—brewing better coffee.
         </p>
         <a
           href="https://apps.apple.com/us/app/brewlogica-coffee-tracker/id6757343429"
